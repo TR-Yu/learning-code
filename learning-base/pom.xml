@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.yu</groupId>
+    <artifactId>learning-base</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <!-- 设计模式代码 -->
+        <module>design-pattern/design-pattern-book-exercise</module>
+        <module>design-pattern/observer-java</module>
+        <module>design-pattern/event-model</module>
+
+        <!-- ASM字节码代码 -->
+        <module>asm/asm-exercise</module>
+
+        <!-- 锁的实现和使用代码 -->
+        <module>lock/lock-java-jdk</module>
+
+        <!-- 线程相关使用代码 -->
+        <module>thread/thread-java-jdk</module>
+
+        <!-- Java特性相关代码 -->
+        <module>java-feature/feature-base</module>
+
+        <!-- 单元测试使用相关代码 -->
+        <module>unit-test/base-test</module>
+        <module>unit-test/powermock-test</module>
+        <module>unit-test/unit-test-spring</module>
+
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+</project>

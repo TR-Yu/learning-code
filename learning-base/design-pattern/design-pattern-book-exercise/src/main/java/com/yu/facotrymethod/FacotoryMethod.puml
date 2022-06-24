@@ -1,0 +1,58 @@
+@startuml
+
+abstract class Dialog {
++{abstract} Button createButton()
++ void render()
+}
+
+class WindowsDialog {
++ WindowsButton createButton()
+}
+
+class IosDialog {
++ IosButton createButton()
+}
+
+class WebDialog {
++ WebButton createButton()
+}
+
+WindowsDialog -up-|> Dialog
+IosDialog -up-|> Dialog
+WebDialog -up-|> Dialog
+
+interface Button {
++ void render()
++ void onClick(Function f）
+}
+
+class WindowsButton {
++ void render()
++ void onClick(Function f）
+}
+
+class WebButton {
++ void render()
++ void onClick(Function f）
+}
+
+class IosButton {
++ void render()
++ void onClick(Function f）
+}
+
+WebButton .up.|> Button
+WindowsButton .up.|> Button
+IosButton .up.|> Button
+
+class Application {
+-Dialog dialog
+- void initialize()
++ void main()
+}
+
+Application::dialog *-- Dialog
+
+
+
+@enduml
